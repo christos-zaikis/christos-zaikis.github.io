@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1"
+    />
+    <title>Research - Christos Zaikis</title>
+    <link href="../img/profile.jpg" rel="icon" />
+
+    <meta property="og:title" content="Research - Christos Zaikis" />
+    <meta property="og:type" content="website" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta property="og:url" content="https://christos-zaikis.github.io/research/" />
+
+    <link rel="stylesheet" href="../css/style.min.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/hugocisneros.com/webmention"
+    />
+    <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc" />
+
+    <script>
+      function updateMode() {
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ? document.documentElement.classList.add("dark")
+          : document.documentElement.classList.remove("dark");
+      }
+      function toggleMode() {
+        localStorage.theme === "dark"
+          ? (localStorage.theme = "light")
+          : (localStorage.theme = "dark"),
+          updateMode();
+      }
+      window.onload = updateMode();
+      function toggleMenu() {
+        let e = document.getElementById("navbar-default");
+        e.classList.contains("hidden")
+          ? e.classList.remove("hidden")
+          : e.classList.add("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+      <nav>
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <div class="nav-main my-2.5">
+            <a
+              href="https://christos-zaikis.github.io/"
+              class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0"
+              >Christos Zaikis</a
+            >
+          </div>
+          <button
+            type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="grid md:grid-flow-col items-center justify-between text-lg my-2.5"
+            >
+              <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+                <a
+                  class="text-zinc-600 dark:text-zinc-300 hover:border-b-0"
+                  href="/research/"
+                  >Research</a
+                >
+              </li>
+
+              <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+                <a
+                  class="text-zinc-600 dark:text-zinc-300 hover:border-b-0"
+                  href="/services/"
+                  >Services</a
+                >
+              </li>
+
+              <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+                <a
+                  class="text-zinc-600 dark:text-zinc-300 hover:border-b-0"
+                  href="/experiences/"
+                  >Experiences</a
+                >
+              </li>
+
+              <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+                <a
+                  class="text-zinc-600 dark:text-zinc-300 hover:border-b-0"
+                  href="/services/cv.pdf"
+                  >CV</a
+                >
+              </li>
+
+              <li class="h-7 pl-2.5 pr-0 list-none">
+                <button
+                  type="button"
+                  onclick="toggleMode()"
+                  class="h-full"
+                  aria-label="Toggle between dark and light mode"
+                >
+                  <img
+                    class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                    id="ligh-mode-button-img"
+                    alt="A sun icon for switching to light mode"
+                    src="../img/light_mode.svg"
+                  />
+                  <img
+                    class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                    id="dark-mode-button-img"
+                    alt="A moon icon for switching to dark mode"
+                    src="../img/dark_mode.svg"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0 Page(/research/_index.md)"
+      role="main"
+    >
+      <h1 id="resarch">Resarch</h1>
+      <p>
+        I&rsquo;m interested in Data Mining, and Artificial Intelligence. My
+        current research focuses mainly on:
+      </p>
+      <ul>
+        <li>
+          <p>Graph Learning</p>
+        </li>
+        <li>
+          <p>Recommender Systems (RecSys)</p>
+        </li>
+        <li>
+          <p>Large Language Models (LLMs)</p>
+        </li>
+        <li>
+          <p>Trustworthy AI</p>
+        </li>
+      </ul>
+      <p> </p>
+      <h2 id="talks">Tutorials</h2>
+      <!-- <ul>
+<li>Yujuan Ding, Wenqi Fan, Liangbo Ning, <b>Shijie Wang</b>, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li
+</br><a href="https://advanced-recommender-systems.github.io/RAG-Meets-LLMs/"><em>RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models</em></a>
+</br>SIGKDD Conference on Knowledge Discovery and Data Mining (KDD, Tutorial), 2024.</li>
+<li>Yujuan Ding, <b></b>, Liangbo Ning, Qiaoyu Tan, Wenqi Fan, and Qing Li 
+</br><a href="https://advanced-recommender-systems.github.io/LLMs4Rec-IJCAI/"><em>Recommender Systems in the Era of Large Language Models (LLMs)</em></a>
+</br>International Joint Conference on Artificial Intelligence (IJCAI, Tutorial), 2024.</li>
+<li>Wenqi Fan, Xiangyu Zhao, Lin Wang, Xiao Chen, Jingtong Gao, Qidong Liu, and <b>Shijie Wang</b>
+</br><a href="https://advanced-recommender-systems.github.io/trustworthy-recommendations/"><em>Trustworthy Recommender Systems: Foundations and Frontiers</em></a>
+</br>SIGKDD Conference on Knowledge Discovery and Data Mining (KDD, Tutorial), 2023.</li>
+<li>Wenqi Fan, Xiangyu Zhao, <b>Shijie Wang</b>, Xiao Chen, Jingtong Gao, Qidong Liu, and Lin Wang
+</br><a href="https://advanced-recommender-systems.github.io/trustworthy-rec/"><em>Trustworthy Recommender Systems: Foundations and Frontiers</em></a>
+</br>International Joint Conference on Artificial Intelligence (IJCAI, Tutorial), 2023.</li>
+<li>Wenqi Fan, Xiangyu Zhao, Lin Wang, Xiao Chen, Jingtong Gao, Qidong Liu, and <b>Shijie Wang</b>
+</br><a href="https://advanced-recommender-systems.github.io/trustworthiness-tutorial/"><em>Trustworthy Recommender Systems</em></a>
+</br>The Web Conference (WWW, Tutorial), 2023.</li>
+</ul> -->
+      <p> </p>
+      <!-- raw HTML omitted -->
+      <!-- raw HTML omitted -->
+
+      <h2 id="publications">Publications</h2>
+      <!-- <div>
+         * indicates equal contribution.
+      </div>
+
+      <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+      my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+      leading-tight justify-around" id="Untargeted-Black-box-Attacks-for-Social-Recommendations"
+      itemscope itemtype="http://schema.org/ScholarlyArticle">
+      <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+      itemscope itemtype="http://schema.org/ImageObject">
+      <img alt="Graph Unlearning with Efficient Partial Retraining paper illustration"
+       itemprop="url" src="../img/paper/multiattack.jpg"
+       class="w-full"/>
+      </div>
+      <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+      
+          <b><span itemprop="author">Shijie Wang</span></b>,
+      
+      <span itemprop="author">Wenqi Fan, Xiao-yong Wei, Xiaowei Mei, Shanru Lin, Qing Li</span>
+      
+      <br>
+      <b>
+      <a href="https://arxiv.org/abs/2311.07127">
+          <span itemprop="name">Multi-agent Attacks for Black-box Social Recommendations</span>
+      </a>
+      </b>
+      <meta itemprop="headline" content=">Multi-agent Attacks for Black-box Social Recommendations"/>
+      <br>
+      
+      <div>
+      In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <i itemprop="name">Transactions on Information Systems (TOIS)</i></span>,
+      
+      <meta itemprop="datePublished" content="2024">2024.
+      </div><div itemprop="description" class="pub-description text-sm my-1.5"> To perform untargeted attacks on social recommender systems, attackers can construct malicious social relationships for fake users to enhance the attack performance. However, the coordination of social relations and item profiles is challenging for attacking black-box social recommendations. To address this limitation, we first conduct several preliminary studies to demonstrate the effectiveness of cross-community connections and cold-start items in degrading recommendations performance. Specifically, we propose a novel framework Multiattack based on multi-agent reinforcement learning to coordinate the generation of cold-start item profiles and cross-community social relations for conducting untargeted attacks on black-box social recommendations. Comprehensive experiments on various real-world datasets demonstrate the effectiveness of our proposed attacking framework under the black-box setting.</div>
+      <div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+                   dark:bg-sky-700 rounded-sm p-1
+                   dark:hover:bg-sky-500
+                   hover:bg-sky-800 mr-1"><a class="border-none
+                   text-white
+                   dark:text-zinc-200
+                   hover:text-gray-900
+                    hover:dark:text-gray-800"
+             itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2311.07127">paper</a></span><span class="publication-link cursor-pointer
+                   bg-sky-600 dark:bg-sky-700
+                   hover:bg-sky-800
+                   dark:hover:bg-sky-500
+                   text-white
+                   dark:text-zinc-200
+                   dark:hover:text-gray-800
+                   hover:text-gray-900
+                   rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+                  data-target="#open-modal-Untargeted-Black-box-Attacks-for-Social-Recommendations">cite</button></span></div>
+      </div>
+      </div> -->
+
+      <!-- 
+        <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+        my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+        leading-tight justify-around" id="A-Survey-on-RAG-Meets-LLMs:-Towards-Retrieval-Augmented-Large-Language-Models"
+ itemscope itemtype="http://schema.org/ScholarlyArticle">
+<div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+     itemscope itemtype="http://schema.org/ImageObject">
+    <img alt="A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models"
+         itemprop="url" src="../img/paper/cheatagent.png"
+         class="w-full"/>
+</div>
+
+    <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+
+    <span itemprop="author">Liangbo Ning*</span>,
+    
+    <b><span itemprop="author">Shijie Wang*</span></b>,
+    
+    <span itemprop="author">Wenqi Fan, Qing Li, Xu Xin, Hao Chen, Feiran Huang</span>
+    
+    <br>
+    <b>
+        <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671837">
+            <span itemprop="name">CheatAgent: Attacking LLM-Empowered Recommender Systems via LLM Agent</span>
+        </a>
+    </b>
+    <meta itemprop="headline" content="CheatAgent: Attacking LLM-Empowered Recommender Systems via LLM Agent"/>
+    <br>
+    
+    <div>
+    In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <i itemprop="name">KDD</i></span>,
+    
+    <meta itemprop="datePublished" content="2024">2024.
+    </div><div itemprop="description" class="pub-description text-sm my-1.5">In this paper, we propose a novel attack framework called CheatAgent by harnessing the human-like capabilities of LLMs, where an LLM-based agent is developed to attack LLM-Empowered RecSys. Specifically, our method first identifies the insertion position for maximum impact with minimal input modification. After that, the LLM agent is designed to generate adversarial perturbations to insert at target positions. To further improve the quality of generated perturbations, we utilize the prompt tuning technique to improve attacking strategies via feedback from the victim RecSys iteratively. Extensive experiments across three real-world datasets demonstrate the effectiveness of our proposed attacking method.</div>
+    <div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+      dark:bg-sky-700 rounded-sm p-1
+      dark:hover:bg-sky-500
+      hover:bg-sky-800 mr-1"><a class="border-none
+      text-white
+      dark:text-zinc-200
+      hover:text-gray-900
+       hover:dark:text-gray-800"
+itemprop="mainEntityOfPage" href="">paper</a> -->
+      <!-- </span><span class="publication-link bg-sky-600
+dark:bg-sky-700 rounded-sm p-1
+dark:hover:bg-sky-500
+hover:bg-sky-800 mr-1"><a class="border-none
+text-white
+dark:text-zinc-200
+hover:text-gray-900
+hover:dark:text-gray-800"
+itemprop="mainEntityOfPage" href="https://drive.google.com/file/d/1ZtCvrXEpIQrfTnBN-X1XWbAH2BHTGFsT/view">code</span></a> -->
+      <!-- </span><span class="publication-link cursor-pointer
+                     bg-sky-600 dark:bg-sky-700
+                     hover:bg-sky-800
+                     dark:hover:bg-sky-500
+                     text-white
+                     dark:text-zinc-200
+                     dark:hover:text-gray-800
+                     hover:text-gray-900
+                     rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+                    data-target="#open-modal-CheatAgent:-Attacking-LLM-Empowered-Recommender-Systems-via-LLM-Agent">cite</button></span></div>
+</div>
+</div>
+        <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+        my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+        leading-tight justify-around" id="A-Survey-on-RAG-Meets-LLMs:-Towards-Retrieval-Augmented-Large-Language-Models"
+ itemscope itemtype="http://schema.org/ScholarlyArticle">
+<div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+     itemscope itemtype="http://schema.org/ImageObject">
+    <img alt="A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models"
+         itemprop="url" src="../img/paper/RAG.png"
+         class="w-full"/>
+</div>
+<div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+    
+    <span itemprop="author">Yujuan Ding, Wenqi Fan, Liangbo Ning</span>,
+    
+    <b><span itemprop="author">Shijie Wang</span></b>,
+    
+    <span itemprop="author">Hengyun Li, Dawei Yin, Tat-Seng Chua, Qing Li</span>
+    
+    <br>
+    <b>
+        <a href="https://arxiv.org/abs/2404.14928">
+            <span itemprop="name">A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models</span>
+        </a>
+    </b>
+    <meta itemprop="headline" content="A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models"/>
+    <br>
+    
+    <div>
+    In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <i itemprop="name">KDD</i></span>,
+    
+    <meta itemprop="datePublished" content="2024">2024.
+    </div><div itemprop="description" class="pub-description text-sm my-1.5">In this survey, we comprehensively review existing research studies in retrieval-augmented large language models (RA-LLMs), covering three primary technical perspectives: architectures, training strategies, and applications. As the preliminary knowledge, we briefly introduce the foundations and recent advances of LLMs. Then, to illustrate the practical significance of RAG for LLMs, we categorize mainstream relevant work by application areas, detailing specifically the challenges of each and the corresponding capabilities of RA-LLMs. Finally, to deliver deeper insights, we discuss current limitations and several promising directions for future research.</div>
+    <div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+                     dark:bg-sky-700 rounded-sm p-1
+                     dark:hover:bg-sky-500
+                     hover:bg-sky-800 mr-1"><a class="border-none
+                     text-white
+                     dark:text-zinc-200
+                     hover:text-gray-900
+                      hover:dark:text-gray-800"
+               itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2405.06211">paper</a></span><span class="publication-link cursor-pointer
+                     bg-sky-600 dark:bg-sky-700
+                     hover:bg-sky-800
+                     dark:hover:bg-sky-500
+                     text-white
+                     dark:text-zinc-200
+                     dark:hover:text-gray-800
+                     hover:text-gray-900
+                     rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+                    data-target="#open-modal-A-Survey-on-RAG-Meets-LLMs:-Towards-Retrieval-Augmented-Large-Language-Models">cite</button></span></div>
+</div>
+</div>
+
+
+
+        <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+        my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+        leading-tight justify-around" id="Graph-Machine-Learning-in-the-Era-of-Large-Language-Models-(LLMs)"
+ itemscope itemtype="http://schema.org/ScholarlyArticle">
+<div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+     itemscope itemtype="http://schema.org/ImageObject">
+    <img alt="Graph Machine Learning in the Era of Large Language Models (LLMs)"
+         itemprop="url" src="../img/paper/GFM.jpg"
+         class="w-full"/>
+</div>
+<div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+    
+    <span itemprop="author">Wenqi Fan</span>,
+    
+    <b><span itemprop="author">Shijie Wang</span></b>,
+    
+    <span itemprop="author">Jiani Huang, Zhikai Chen, Yu Song, Wenzhuo Tang, Haitao Mao, Hui Liu, Xiaorui Liu, Dawei Yin, Qing Li</span>
+    
+    <br>
+    <b>
+        <a href="https://arxiv.org/abs/2404.14928">
+            <span itemprop="name">Graph Machine Learning in the Era of Large Language Models (LLMs)</span>
+        </a>
+    </b>
+    <meta itemprop="headline" content="Graph Machine Learning in the Era of Large Language Models (LLMs)"/>
+    <br>
+    
+    <div>
+    In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <i itemprop="name">Preprint</i></span>,
+    
+    <meta itemprop="datePublished" content="2024">2024.
+    </div><div itemprop="description" class="pub-description text-sm my-1.5">In this survey, we first review the recent developments in Graph ML. We then explore how LLMs can be utilized to enhance the quality of graph features, alleviate the reliance on labeled data, and address challenges such as graph heterogeneity and out-of-distribution (OOD) generalization. Afterward, we delve into how graphs can enhance LLMs, highlighting their abilities to enhance LLM pre-training and inference. Furthermore, we investigate various applications and discuss the potential future directions in this promising field.</div>
+    <div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+                     dark:bg-sky-700 rounded-sm p-1
+                     dark:hover:bg-sky-500
+                     hover:bg-sky-800 mr-1"><a class="border-none
+                     text-white
+                     dark:text-zinc-200
+                     hover:text-gray-900
+                      hover:dark:text-gray-800"
+               itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2404.14928">paper</a></span><span class="publication-link cursor-pointer
+                     bg-sky-600 dark:bg-sky-700
+                     hover:bg-sky-800
+                     dark:hover:bg-sky-500
+                     text-white
+                     dark:text-zinc-200
+                     dark:hover:text-gray-800
+                     hover:text-gray-900
+                     rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+                    data-target="#open-modal-Graph-Machine-Learning-in-the-Era-of-Large-Language-Models-(LLMs)">cite</button></span></div>
+</div>
+</div> 
+   
+        <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+            my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+            leading-tight justify-around" id="Graph-Unlearning-with-Efficient-Partial-Retraining"
+     itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+         itemscope itemtype="http://schema.org/ImageObject">
+        <img alt="Graph Unlearning with Efficient Partial Retraining paper illustration"
+             itemprop="url" src="../img/paper/framework-unlearning.png"
+             class="w-full"/>
+    </div>
+    <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+        
+        <span itemprop="author">Jiahao Zhang, Lin Wang</span>,
+        
+        <b><span itemprop="author">Shijie Wang</span></b>,
+        
+        <span itemprop="author">Wenqi Fan</span>
+        
+        <br>
+        <b>
+            <a href="https://arxiv.org/abs/2403.07353">
+                <span itemprop="name">Graph Unlearning with Efficient Partial Retraining</span>
+            </a>
+        </b>
+        <meta itemprop="headline" content="Graph Unlearning with Efficient Partial Retraining"/>
+        <br>
+        
+        <div>
+        In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <i itemprop="name">WWW PhD Symposium</i></span>,
+        
+        <meta itemprop="datePublished" content="2024">2024.
+        </div><div itemprop="description" class="pub-description text-sm my-1.5">Graph Neural Networks (GNNs) have achieved remarkable success in various real-world applications. However, GNNs may be trained on undesirable graph data, which can degrade their performance and reliability. To enable trained GNNs to efficiently unlearn unwanted data, a desirable solution is retraining-based graph unlearning, which partitions the training graph into subgraphs and trains sub-models on them, allowing fast unlearning through partial retraining. However, the graph partition process causes information loss in the training graph, resulting in the low model utility of sub-GNN models. In this paper, we propose GraphRevoker, a novel graph unlearning framework that better maintains the model utility of unlearnable GNNs.</div>
+        <div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+                         dark:bg-sky-700 rounded-sm p-1
+                         dark:hover:bg-sky-500
+                         hover:bg-sky-800 mr-1"><a class="border-none
+                         text-white
+                         dark:text-zinc-200
+                         hover:text-gray-900
+                          hover:dark:text-gray-800"
+                   itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2403.07353">paper</a></span><span class="publication-link cursor-pointer
+                         bg-sky-600 dark:bg-sky-700
+                         hover:bg-sky-800
+                         dark:hover:bg-sky-500
+                         text-white
+                         dark:text-zinc-200
+                         dark:hover:text-gray-800
+                         hover:text-gray-900
+                         rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+                        data-target="#open-modal-Graph-Unlearning-with-Efficient-Partial-Retraining">cite</button></span></div>
+    </div>
+</div> -->
+
+      <!--     
+<div class="pub-wrapper w-full inline-flex flex-wrap items-center
+my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+leading-tight justify-around" id="A-novel-multi-agent-deep-RL-approach-for-traffic-signal-control"
+itemscope itemtype="http://schema.org/ScholarlyArticle">
+<div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+itemscope itemtype="http://schema.org/ImageObject">
+<img alt="Graph Unlearning with Efficient Partial Retraining paper illustration"
+ itemprop="url" src="../img/paper/traffic.png"
+ class="w-full"/>
+</div>
+<div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+
+    <b><span itemprop="author">Shijie Wang</span></b>,
+
+<span itemprop="author">Shangbo Wang</span>
+
+<br>
+<b>
+<a href="https://arxiv.org/abs/2306.02684">
+    <span itemprop="name">A novel Multi-Agent Deep RL Approach for Traffic Signal Control
+    </span>
+</a>
+</b>
+<meta itemprop="headline" content=">A novel Multi-Agent Deep RL Approach for Traffic Signal Control"/>
+<br>
+
+<div>
+In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+<i itemprop="name">PerCom Workshop</i></span>,
+
+<meta itemprop="datePublished" content="2024">2023.
+</div><div itemprop="description" class="pub-description text-sm my-1.5">As travel demand increases and urban traffic condition becomes more complicated, applying multi-agent deep reinforcement learning (MARL) to traffic signal control becomes one of the hot topics. The rise of Reinforcement Learning (RL) has opened up opportunities for solving Adaptive Traffic Signal Control (ATSC) in complex urban traffic networks, and deep neural networks have further enhanced their ability to handle complex data. Traditional research in traffic signal control is based on the centralized Reinforcement Learning technique. However, in a large-scale road network, centralized RL is infeasible because of an exponential growth of joint state-action space. In this paper, we propose a Friend-Deep Q-network (Friend-DQN) approach for multiple traffic signal control in urban networks, which is based on an agent-cooperation scheme. In particular, the cooperation between multiple agents can reduce the state-action space and thus speed up the convergence.</div>
+<div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link bg-sky-600
+             dark:bg-sky-700 rounded-sm p-1
+             dark:hover:bg-sky-500
+             hover:bg-sky-800 mr-1"><a class="border-none
+             text-white
+             dark:text-zinc-200
+             hover:text-gray-900
+              hover:dark:text-gray-800"
+       itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2306.02684">paper</a></span><span class="publication-link cursor-pointer
+             bg-sky-600 dark:bg-sky-700
+             hover:bg-sky-800
+             dark:hover:bg-sky-500
+             text-white
+             dark:text-zinc-200
+             dark:hover:text-gray-800
+             hover:text-gray-900
+             rounded-sm p-1 mr-1"><button class="open-modal text-inherit"
+            data-target="#open-modal-A-novel-multi-agent-deep-RL-approach-for-traffic-signal-control">cite</button></span></div>
+</div>
+</div>
+    
+
+<!-- Citations -->
+      <div
+        id="#open-modal-CheatAgent:-Attacking-LLM-Empowered-Recommender-Systems-via-LLM-Agent"
+        class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 p-8 bg-white dark:bg-neutral-700 max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            id="#close-modal-CheatAgent:-Attacking-LLM-Empowered-Recommender-Systems-via-LLM-Agent"
+            title="Close"
+            class="modal-close rounded-sm p-2"
+          >
+            ✕
+          </button>
+          <h3>
+            Cite
+            <i
+              >CheatAgent: Attacking LLM-Empowered Recommender Systems via LLM
+              Agent</i
+            >
+          </h3>
+          <button
+            class="modal-copy-citation pr-2 pl-1 my-2 ml-2 bg-sky-600 dark:bg-sky-700 rounded-sm text-white dark:text-zinc-200 dark:hover:text-gray-800 hover:text-gray-900 hover:bg-sky-800 disabled:bg-neutral-500 hover:disabled:text-white dark:hover:disabled:text-zinc-200 dark:disabled:bg-neutral-500 dark:hover:bg-sky-500"
+            id="#copy-74253170"
+          >
+            Copy to clipboard
+          </button>
+          <pre
+            class="bg-slate-100 dark:bg-slate-800"
+          ><code id="74253170">@inproceedings{ning2024cheatagent,
+            title={CheatAgent: Attacking LLM-Empowered Recommender Systems via LLM Agent},
+            author={Ning, Liang-bo and Wang, Shijie and Fan, Wenqi and Li, Qing and Xu, Xin and Chen, Hao and Huang, Feiran},
+            booktitle={Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+            pages={2284--2295},
+            year={2024}
+          }
+          </code></pre>
+        </div>
+      </div>
+
+      <div
+        id="#open-modal-A-Survey-on-RAG-Meets-LLMs:-Towards-Retrieval-Augmented-Large-Language-Models"
+        class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 p-8 bg-white dark:bg-neutral-700 max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            id="#close-modal-A-Survey-on-RAG-Meets-LLMs:-Towards-Retrieval-Augmented-Large-Language-Models"
+            title="Close"
+            class="modal-close rounded-sm p-2"
+          >
+            ✕
+          </button>
+          <h3>
+            Cite
+            <i
+              >A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large
+              Language Models</i
+            >
+          </h3>
+          <button
+            class="modal-copy-citation pr-2 pl-1 my-2 ml-2 bg-sky-600 dark:bg-sky-700 rounded-sm text-white dark:text-zinc-200 dark:hover:text-gray-800 hover:text-gray-900 hover:bg-sky-800 disabled:bg-neutral-500 hover:disabled:text-white dark:hover:disabled:text-zinc-200 dark:disabled:bg-neutral-500 dark:hover:bg-sky-500"
+            id="#copy-74253170"
+          >
+            Copy to clipboard
+          </button>
+          <pre
+            class="bg-slate-100 dark:bg-slate-800"
+          ><code id="74253170">@article{ding2024survey,
+            title={A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models},
+            author={Ding, Yujuan and Fan, Wenqi and Ning, Liangbo and Wang, Shijie and Li, Hengyun and Yin, Dawei and Chua, Tat-Seng and Li, Qing},
+            journal={arXiv preprint arXiv:2405.06211},
+            year={2024}
+          }
+          </code></pre>
+        </div>
+      </div>
+
+      <div
+        id="#open-modal-Graph-Machine-Learning-in-the-Era-of-Large-Language-Models-(LLMs)"
+        class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 p-8 bg-white dark:bg-neutral-700 max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            id="#close-modal-Graph-Machine-Learning-in-the-Era-of-Large-Language-Models-(LLMs)"
+            title="Close"
+            class="modal-close rounded-sm p-2"
+          >
+            ✕
+          </button>
+          <h3>
+            Cite
+            <i
+              >Graph Machine Learning in the Era of Large Language Models
+              (LLMs)</i
+            >
+          </h3>
+          <button
+            class="modal-copy-citation pr-2 pl-1 my-2 ml-2 bg-sky-600 dark:bg-sky-700 rounded-sm text-white dark:text-zinc-200 dark:hover:text-gray-800 hover:text-gray-900 hover:bg-sky-800 disabled:bg-neutral-500 hover:disabled:text-white dark:hover:disabled:text-zinc-200 dark:disabled:bg-neutral-500 dark:hover:bg-sky-500"
+            id="#copy-74253170"
+          >
+            Copy to clipboard
+          </button>
+          <pre
+            class="bg-slate-100 dark:bg-slate-800"
+          ><code id="74253170">@article{fan2024graph,
+          title={Graph Machine Learning in the Era of Large Language Models (LLMs)},
+          author={Fan, Wenqi and Wang, Shijie and Huang, Jiani and Chen, Zhikai and Song, Yu and Tang, Wenzhuo and Mao, Haitao and Liu, Hui and Liu, Xiaorui and Yin, Dawei and others},
+          journal={arXiv preprint arXiv:2404.14928},
+          year={2024}
+        }
+          </code></pre>
+        </div>
+      </div>
+
+      <div
+        id="#open-modal-Graph-Unlearning-with-Efficient-Partial-Retraining"
+        class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 p-8 bg-white dark:bg-neutral-700 max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            id="#close-modal-Graph-Unlearning-with-Efficient-Partial-Retraining"
+            title="Close"
+            class="modal-close rounded-sm p-2"
+          >
+            ✕
+          </button>
+          <h3>
+            Cite <i>Graph Unlearning with Efficient Partial Retraining</i>
+          </h3>
+          <button
+            class="modal-copy-citation pr-2 pl-1 my-2 ml-2 bg-sky-600 dark:bg-sky-700 rounded-sm text-white dark:text-zinc-200 dark:hover:text-gray-800 hover:text-gray-900 hover:bg-sky-800 disabled:bg-neutral-500 hover:disabled:text-white dark:hover:disabled:text-zinc-200 dark:disabled:bg-neutral-500 dark:hover:bg-sky-500"
+            id="#copy-74253170"
+          >
+            Copy to clipboard
+          </button>
+          <pre
+            class="bg-slate-100 dark:bg-slate-800"
+          ><code id="74253170">@article{zhang2024graph,
+            title={Graph Unlearning with Efficient Partial Retraining},
+            author={Zhang, Jiahao and Wang, Lin and Wang, Shijie and Fan, Wenqi},
+            journal={arXiv preprint arXiv:2403.07353},
+            year={2024}
+          }</code></pre>
+        </div>
+      </div>
+
+      <div
+        id="#open-modal-Untargeted-Black-box-Attacks-for-Social-Recommendations"
+        class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 p-8 bg-white dark:bg-neutral-700 max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2"
+        >
+          <button
+            id="#close-modal-Untargeted-Black-box-Attacks-for-Social-Recommendations"
+            title="Close"
+            class="modal-close rounded-sm p-2"
+          >
+            ✕
+          </button>
+          <h3>
+            Cite <i>Multi-agent Attacks for Black-box Social Recommendations</i>
+          </h3>
+          <button
+            class="modal-copy-citation pr-2 pl-1 my-2 ml-2 bg-sky-600 dark:bg-sky-700 rounded-sm text-white dark:text-zinc-200 dark:hover:text-gray-800 hover:text-gray-900 hover:bg-sky-800 disabled:bg-neutral-500 hover:disabled:text-white dark:hover:disabled:text-zinc-200 dark:disabled:bg-neutral-500 dark:hover:bg-sky-500"
+            id="#copy-3e5a543d"
+          >
+            Copy to clipboard
+          </button>
+          <pre
+            class="bg-slate-100 dark:bg-slate-800"
+          ><code id="3e5a543d">@article{fan2023untargeted,
+            title={Untargeted Black-box Attacks for Social Recommendations},
+            author={Fan, Wenqi and Wang, Shijie and Wei, Xiao-yong and Mei, Xiaowei and Li, Qing},
+            journal={arXiv preprint arXiv:2311.07127},
+            year={2023}
+          }</code></pre>
+        </div>
+      </div>
+
+      <!--     
+<div id="#open-modal-A-novel-multi-agent-deep-RL-approach-for-traffic-signal-control"
+     class="modal-window bg-tp-black invisible fixed top-0 left-0
+            right-0 bottom-0 transition-all pointer-events-none z-50">
+    <div class="absolute top-1/2 left-1/2 p-8 bg-white
+                dark:bg-neutral-700
+
+                max-w-full
+                rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
+        <button id="#close-modal-A-novel-multi-agent-deep-RL-approach-for-traffic-signal-control" title="Close" class="modal-close rounded-sm p-2">✕</button>
+        <h3>Cite <i>A novel multi-agent deep RL approach for traffic signal control</i></h3>
+        <button class="modal-copy-citation pr-2 pl-1 my-2 ml-2
+                       bg-sky-600 dark:bg-sky-700 rounded-sm
+                       text-white
+                       dark:text-zinc-200
+                       dark:hover:text-gray-800
+                       hover:text-gray-900
+                       hover:bg-sky-800
+                       disabled:bg-neutral-500
+                       hover:disabled:text-white
+                       dark:hover:disabled:text-zinc-200
+                       dark:disabled:bg-neutral-500
+                       dark:hover:bg-sky-500" id="#copy-a3c9498c">Copy to clipboard</button>
+        <pre class="bg-slate-100 dark:bg-slate-800"><code id="a3c9498c">@inproceedings{shijie2023novel,
+            title={A novel multi-agent deep RL approach for traffic signal control},
+            author={Shijie, Wang and Shangbo, Wang},
+            booktitle={2023 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)},
+            pages={15--20},
+            year={2023},
+            organization={IEEE}
+          }</code></pre>
+    </div>
+</div> -->
+
+      <script>
+        function toggleModal(win) {
+          return (event) => {
+            if (
+              event.target.id.startsWith("#open-modal") ||
+              event.target.id.startsWith("#close-modal") ||
+              event.target.classList.contains("open-modal")
+            ) {
+              event.stopPropagation();
+              win.classList.toggle("invisible");
+              win.classList.toggle("pointer-events-auto");
+              document.body.classList.toggle("pointer-events-none");
+            }
+          };
+        }
+        var list = document.getElementsByClassName("open-modal");
+        for (let item of list) {
+          var id = item.attributes["data-target"].textContent;
+          var modWin = document.getElementById(id);
+          var closeButton = document.getElementById(
+            id.replace("open", "close")
+          );
+
+          item.addEventListener("click", toggleModal(modWin));
+          closeButton.addEventListener("click", toggleModal(modWin));
+          modWin.addEventListener("click", toggleModal(modWin));
+        }
+        var clipboardCopyButtons = document.getElementsByClassName(
+          "modal-copy-citation"
+        );
+        for (let button of clipboardCopyButtons) {
+          let citation_id = button.id.replace("#copy-", "");
+          let citation_text = document.getElementById(citation_id);
+          button.addEventListener(
+            "click",
+            (function (clicked) {
+              return function () {
+                if (!clicked) {
+                  var last = this.innerHTML;
+                  navigator.clipboard.writeText(citation_text.innerHTML).then(
+                    () => {
+                      this.innerHTML = "Copied!";
+                      this.disabled = true;
+                    },
+                    () => {
+                      this.innerHTML = "Error copying!";
+                    }
+                  );
+                  clicked = true;
+                  setTimeout(
+                    function () {
+                      this.innerHTML = last;
+                      this.disabled = false;
+                      clicked = false;
+                    }.bind(this),
+                    1000
+                  );
+                }
+              };
+            })(false),
+            this
+          );
+        }
+      </script>
+    </main>
+
+    <div
+      class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5"
+      id="contact"
+    >
+      <div class="container text-center py-5">
+        <div class="d-flex justify-content-center mb-4">
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://scholar.google.gr/citations?user=9OzopCYAAAAJ&hl=el"
+            ><i class="fas fa-graduation-cap"></i
+          ></a>
+          <!-- <a
+            class="btn btn-light btn-social mr-2"
+            href=""
+            ><i class="fab fa-instagram"></i
+          ></a> -->
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://github.com/ChrisZaikis"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://www.linkedin.com/in/chris-zaikis-b63164112/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="mailto:christos.zaikis@gmail.com"
+            ><i class="fa fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer container h-10 text-center mt-1">
+      <hr class="my-4" />
+      <ul class="pl-0 mt-1">
+        <li
+          class="ml-2 first:before:content-none before:content-['•'] inline-block list-none"
+        >
+          <a
+            class="ml-2 text-neutral-800 dark:text-neutral-400 border-none"
+            href="https://christos-zaikis.github.io/"
+            >Make everyday an adventure</a
+          >
+        </li>
+        <li
+          class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"
+        >
+          <span class="ml-2">© Christos Zaikis 2024</span>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
